@@ -3,10 +3,10 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0
- */
+ *  * main - Entry point
+ *   *
+ *    * Return: Always 0
+ *     */
 int main(void)
 {
 	int len;
@@ -40,5 +40,27 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	printf("Unknown:[%r]\n");
+	printf(NULL);
+	_printf(NULL);
+	printf("%");
+	_printf("%");
+	printf("%c",'\0');
+	_printf("%c",'\0');
+	/*printf("%%%");*/
+	/*_printf("%%%");*/
+	printf("%!\n");
+	_printf("%!\n");
+	len = _printf("length:[%!]\n");
+	len2 = printf("length:[%!]\n");
+	_printf("%d, %i\n", len, len);
+	printf("%d, %i\n", len2, len2);
+	_printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("%d + %d = %d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%d", INT_MIN);
+	printf("%d", INT_MIN);
+	_printf("%i + %i = %i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	printf("%i + %i = %i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%d\n", INT_MIN);
+	printf("%d\n", INT_MIN);
 	return (0);
 }
